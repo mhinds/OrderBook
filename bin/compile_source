@@ -1,0 +1,5 @@
+#!/bin/bash
+#compile test files
+javac -cp ../test/:../test/junit-4.10.jar:../src/:org.junit.runner.JUnitCore ../test/*.java
+#compile application files
+javac -cp ../src/ ../src/*.java

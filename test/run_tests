@@ -1,0 +1,4 @@
+#!/bin/bash
+
+javac -cp .:junit-4.10.jar:../src/:org.junit.runner.JUnitCore BuyerTest.java SellerTest.java TestRunner.java
+java -cp .:junit-4.10.jar:../src/ TestRunner

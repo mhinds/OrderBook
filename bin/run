@@ -1,0 +1,27 @@
+#!/bin/bash
+
+cd ../src
+
+echo "Running test 1..."
+time test1=`diff <(gzcat ../test/pricer.in.gz | java Pricer 1) <(gzcat ../test/pricer.out.1.gz)`
+if [[ -n $test1 ]]; then
+    echo "Test 1 failed: gzcat ../test/pricer.in.gz | java Pricer 1"
+    echo $test1
+fi
+echo 
+echo
+echo 'Running test 2...'
+
+time test2=`diff <(gzcat ../test/pricer.in.gz | java Pricer 200) <(gzcat ../test/pricer.out.200.gz)`
+if [[ -n $test2 ]]; then
+    echo "Test 2 failed: gzcat ../test/pricer.in.gz | java Pricer 2"
+    echo $test2
+fi
+echo
+echo
+echo 'Running test 3...'
+time test3=`diff <(gzcat ../test/pricer.in.gz | java Pricer 10000) <(gzcat ../test/pricer.out.10000.gz)`
+if [[ -n $test3 ]]; then
+    echo "Test 3 failed: gzcat ../test/pricer.in.gz | java Pricer 3"
+    echo $test3
+fi
