@@ -1,16 +1,16 @@
 This is my solution to the RGM Advisors Order Book Programming Problem. 
 
  + To compile and run the program run the following on a unix command line: **Note that a JDK installation is required.
-    cd bin/
-    /bin/bash compile_source
-    /bin/bash run
+ cd bin/
+ /bin/bash compile_source
+ /bin/bash run
 
-    or 
+ or 
 
-    cd bin/
-    /bin/bash compile_source
-    cd ../src/
-    cat $TEST_INPUT_FILE | java Pricer
+ cd bin/
+ /bin/bash compile_source
+ cd ../src/
+ cat $TEST_INPUT_FILE | java Pricer
 
  + javadoc can be found in doc/package-summary.html
 
